@@ -18,5 +18,7 @@ public class MyApplication extends Application {
 
 	public static synchronized Context getApp() {
 		return mContext;
+
+
 	}
 }
