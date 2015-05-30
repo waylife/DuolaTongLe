@@ -67,7 +67,6 @@ public class FriendAdapter extends BaseAdapter {
 
     class ViewHolder {
         CircularImageView head_view_civ;
-        TextView head_view_info;
         TextView head_view_uname;
         TextView head_view_distance;
         ImageView head_view_add;

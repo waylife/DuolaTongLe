@@ -12,7 +12,6 @@
         android:background="#b2b2b2" />
 
 
-
     <ListView
         android:id="@+id/listview"
         android:layout_width="fill_parent"
@@ -25,8 +24,7 @@
 
     <ImageView
         android:id="@+id/head_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/find_activity_top" />
+        android:layout_width="115dp"
+        android:layout_height="55dp"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

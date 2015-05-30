@@ -42,7 +42,7 @@ public abstract class BaseSearchTabFragment extends Fragment {
     public abstract void doCreate(View view);
 
     public void setHeadImage(int resId) {
-        mHeaderImage.setImageResource(resId);
+        mHeaderImage.setBackgroundResource(resId);
     }
 
     private void initView() {
