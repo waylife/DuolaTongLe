@@ -73,7 +73,6 @@
 
         <GridView
             android:layout_width="fill_parent"
-            android:layout_height="150dp></GridView>
+            android:layout_height="150dp"></GridView>
     </LinearLayout>
-
 </RelativeLayout>
