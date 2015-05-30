@@ -10,6 +10,10 @@ import android.widget.Button;
 
 import com.sogou.contest.tongle.activity.BaseActivity;
 import com.sogou.contest.tongle.adapter.FragmentAdapters;
+import com.sogou.contest.tongle.bean.User;
+import com.sogou.contest.tongle.dao.ActivityDao;
+
+import java.util.List;
 
 public class MainActivity extends BaseActivity implements OnClickListener {
 
@@ -29,6 +33,15 @@ public class MainActivity extends BaseActivity implements OnClickListener {
         mViewPager.setOnPageChangeListener(changeListener);// 界面滑动监听
 
         bt1.performClick();
+//        ActivityDao dao = new ActivityDao(this);
+//        dao.deleteAll();
+//        dao.insert_test();
+//        List<User> list = dao.queryAll();
+//        List<User> list=dao.query("type", "商家");
+//        for (int i = 0; i < list.size(); i++) {
+//            User u = list.get(i);
+//            System.out.println(u);
+//        }
     }
 
     private void listener() {
