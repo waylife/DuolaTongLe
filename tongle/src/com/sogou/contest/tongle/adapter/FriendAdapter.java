@@ -88,6 +88,7 @@ public class FriendAdapter extends BaseAdapter implements ISearchTab{
     @Override
     public void getData(List data) {
         lists=data;
+        this.notifyDataSetChanged();
     }
 
     private List<FrientEntity> getSearchResult(String tag,int tab) {
