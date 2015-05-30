@@ -2,28 +2,65 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="vertical"
+    android:background="@drawable/register_bg">
 
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="周末去哪玩"/>
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#96A5B8"
         >
-    <TextView
-        android:layout_width="0dp"
+        <ImageView
+            android:id="@+id/back_imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/back_arrow_icon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:text="我发起的活动"
+            android:textSize="20sp"
+            android:gravity="center"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="周末去玉渊潭玩"/>
+        android:layout_marginTop="40dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/publish_activity"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="110dp"
+        android:text="活动：踏青"
+        android:textSize="20sp"/>
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="150dp"
+            />
+    </LinearLayout>
         <Button
             android:id="@+id/person"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="参加活动的人"/>
-    </LinearLayout>
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:text="参加人员"
+            android:textSize="20sp"/>
+    </RelativeLayout>
 
 </LinearLayout>

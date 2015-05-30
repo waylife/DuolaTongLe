@@ -17,7 +17,7 @@
             android:layout_height="match_parent"
             android:layout_margin="10dp"
 
-            android:background="@drawable/head_view_civ_fj"
+            android:src="@drawable/head_view_civ_fj"
             app:siBorderColor="@color/white"
             app:siBorderWidth="0dp" />
 

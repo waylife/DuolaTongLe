@@ -14,9 +14,13 @@
         <Button
             android:id="@+id/setting_cancel"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10sp"
+            android:background="#227FAB"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
             android:text="取消" />
 
         <TextView
@@ -30,10 +34,14 @@
         <Button
             android:id="@+id/setting_save"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:text="保存" />
+            android:text="保存"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10sp"
+            android:background="#227FAB"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"/>
     </RelativeLayout>
 
     <LinearLayout
@@ -41,7 +49,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/head_view"
         android:layout_marginTop="15dp"
-        android:background="@drawable/half_transparent">
+        android:background="@drawable/half_transparent"
+        android:orientation="vertical">
+
         <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="40dp"
