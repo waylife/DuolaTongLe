@@ -20,10 +20,10 @@ public class FragmentAdapters extends FragmentPagerAdapter {
 		Fragment f = null;
 		switch (position) {
 		case 0:
-			f = new FindActivityFragment();
+			f = new FindFriendFragment();
 			break;
 		case 1:
-			f = new FindFriendFragment();
+			f = new FindActivityFragment();
 			break;
 		case 2:
 			f = new MeFragment();

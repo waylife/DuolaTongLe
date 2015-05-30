@@ -26,6 +26,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 		mViewPager.setCurrentItem(0);// 默认加载第一个布局
 		mViewPager.setOffscreenPageLimit(2);// 设置缓存个数
 		mViewPager.setOnPageChangeListener(changeListener);// 界面滑动监听
+
 		bt1.performClick();
 	}
 

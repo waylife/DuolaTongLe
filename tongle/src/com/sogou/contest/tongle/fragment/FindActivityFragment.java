@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.sogou.contest.tongle.R;
-import com.sogou.contest.tongle.adapter.HomeAdapter;
+import com.sogou.contest.tongle.adapter.ActivityAdapter;
 
 /**
  * 找活动
@@ -21,7 +21,7 @@ public class FindActivityFragment extends Fragment {
 	private View view;
 	private ListView xListView;
 	private List<String> list;
-	private HomeAdapter adapter;
+	private ActivityAdapter adapter;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -31,7 +31,7 @@ public class FindActivityFragment extends Fragment {
 		for (int i = 0; i < 20; i++) {
 			list.add(i+"");
 		}
-		adapter = new HomeAdapter(list, getActivity());
+		adapter = new ActivityAdapter(list, getActivity());
 		xListView.setAdapter(adapter);
 
 		return view;

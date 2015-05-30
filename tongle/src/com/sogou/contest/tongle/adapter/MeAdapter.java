@@ -7,11 +7,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-public class LifeAdapter extends BaseAdapter {
+public class MeAdapter extends BaseAdapter {
 	private List<?> list;
 	private Context mContext;
 
-	public LifeAdapter(List<?> list, Context ct) {
+	public MeAdapter(List<?> list, Context ct) {
 		this.list = list;
 		this.mContext = ct;
 	}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="gray_background">#ffececec</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red">#E51A18</color>
+    <color name="line_color">#523E2E</color>
+
+    <color name="search_tab_nomarl">#363636</color>
+    <color name="search_tab_select">#E82926</color>
+    <color name="menu_item_text_color">#E60200</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="news_item_has_read_textcolor">#828282</color>
+    <color name="news_item_no_read_textcolor">#363636</color>
+
+    <item name="transparent" type="drawable">#00000000</item>
+    <item name="red" type="drawable">#00000000</item>
+    <item name="white" type="drawable">#ffffffff</item>
+    <item name="yellow" type="drawable">#ffff9000</item>
+    <item name="green" type="drawable">#ff40929C</item>
+    <item name="black" type="drawable">#000000</item>
+</resources>

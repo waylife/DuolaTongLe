@@ -7,11 +7,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-public class FoodAdapter extends BaseAdapter {
+public class FriendAdapter extends BaseAdapter {
 	private List<?> list;
 	private Context mContext;
 
-	public FoodAdapter(List<?> list, Context ct) {
+	public FriendAdapter(List<?> list, Context ct) {
 		this.list = list;
 		this.mContext = ct;
 	}
