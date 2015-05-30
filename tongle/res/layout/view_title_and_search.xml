@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="wrap_content"
-    android:background="#00ff00">
+    android:background="#0F325B">
     <RelativeLayout
         android:id="@+id/view_head_search_layout"
         android:layout_width="fill_parent"
@@ -17,7 +17,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:src="@drawable/ic_launcher"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/reseach_icon"
             />
         <EditText
             android:id="@+id/view_head_search_et"

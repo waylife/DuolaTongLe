@@ -11,6 +11,7 @@
     <color name="search_tab_nomarl">#363636</color>
     <color name="search_tab_select">#E82926</color>
     <color name="menu_item_text_color">#E60200</color>
+    <color name="tab_selected">#4A6696</color>
 
     <color name="transparent">#00000000</color>
     <color name="news_item_has_read_textcolor">#828282</color>

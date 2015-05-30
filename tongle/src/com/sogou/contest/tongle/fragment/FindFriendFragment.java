@@ -29,6 +29,7 @@ public class FindFriendFragment extends BaseSearchTabFragment {
         for (int i = 0; i < 20; i++) {
             mList.add(i + "");
         }
+        setHeadImage(R.drawable.find_activity_top);
         setAdapter(new BaseAdapter[]{new ActivityAdapter(mList, getActivity()),
                 new ActivityAdapter(mList, getActivity()), new ActivityAdapter(mList, getActivity())}, new String[]{"热门", "附近", "糖猫"});
     }
