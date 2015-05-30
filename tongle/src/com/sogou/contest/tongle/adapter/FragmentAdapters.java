@@ -4,9 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.sogou.contest.tongle.fragment.FoodPagerF;
-import com.sogou.contest.tongle.fragment.HomePagerF;
-import com.sogou.contest.tongle.fragment.LifePagerF;
+import com.sogou.contest.tongle.fragment.FindFriendFragment;
+import com.sogou.contest.tongle.fragment.FindActivityFragment;
+import com.sogou.contest.tongle.fragment.MeFragment;
 
 
 public class FragmentAdapters extends FragmentPagerAdapter {
@@ -20,13 +20,13 @@ public class FragmentAdapters extends FragmentPagerAdapter {
 		Fragment f = null;
 		switch (position) {
 		case 0:
-			f = new HomePagerF();
+			f = new FindActivityFragment();
 			break;
 		case 1:
-			f = new FoodPagerF();
+			f = new FindFriendFragment();
 			break;
 		case 2:
-			f = new LifePagerF();
+			f = new MeFragment();
 			break;
 
 		default:

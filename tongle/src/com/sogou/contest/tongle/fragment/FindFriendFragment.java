@@ -8,12 +8,15 @@ import android.view.ViewGroup;
 
 import com.sogou.contest.tongle.R;
 
-public class FoodPagerF extends Fragment {
+/**
+ * 找朋友
+ */
+public class FindFriendFragment extends Fragment {
 	private View view;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		view = inflater.inflate(R.layout.foodpager, null);
+		view = inflater.inflate(R.layout.findpager, null);
 		return view;
 	}
 

@@ -10,8 +10,6 @@ import java.util.Date;
 
 import org.apache.http.util.EncodingUtils;
 
-import com.sogou.contest.tongle.fragment.HomePagerF;
-
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;

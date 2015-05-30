@@ -30,14 +30,14 @@
             android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="找小圈" />
+            android:text="找活动" />
 
         <Button
             android:id="@+id/bt3"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="我自己" />
+            android:text="我" />
     </LinearLayout>
 
 </LinearLayout>
