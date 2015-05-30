@@ -17,7 +17,7 @@ import java.util.Random;
  */
 public class DbMock {
     private static String []POSITION_TAGS="五道口#天通苑#回龙观#西单#鸟巢#北京西站#国贸#苹果园#五棵松#宛城#大望路#圆明园西#香山#周口店#慕田峪#白河峡谷#天安门".split("#");
-    private static String []INTEREST_TAGS="游泳#读书#乒乓球#滑冰#画画#下棋#搞毛线".split("#");
+    private static String []INTEREST_TAGS="游泳#读书#乒乓球#滑冰#画画#下棋#搞毛线#搜狗#糖猫".split("#");
     private static int []AVATAR_GIRL_RESIDS=new int[]{R.drawable.head_view_civ_xqx,R.drawable.head_view_civ_fj};
     private static int []AVATAR_BOY_RESIDS=new int[]{R.drawable.head_view_civ_nn};
     public static void mockDbData(Context context) {
@@ -25,7 +25,7 @@ public class DbMock {
         dbUtils.configAllowTransaction(true);
         Random random = new Random(SystemClock.elapsedRealtime());
         try {
-            for (int i = 0; i < 100; i++) {
+            for (int i = 0; i < 1000; i++) {
 
                 dbUtils.save(getRandomFriend(random));
             }

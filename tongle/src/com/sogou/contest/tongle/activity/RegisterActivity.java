@@ -9,6 +9,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.sogou.contest.tongle.MainActivity;
 import com.sogou.contest.tongle.R;
@@ -25,6 +26,8 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
     private Button cancelButton;
     private EditText phoneEditText;
     private EditText passwordEditText;
+    private String DEFAULT_PHONE="18500000000";
+    private String DEFAULT_PASSWORD="1950037";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +40,11 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         registerButton.setOnClickListener(this);
         cancelButton.setOnClickListener(this);
 
+        //init values
+        passwordEditText.setText(DEFAULT_PASSWORD);
+        passwordEditText.setSelection(passwordEditText.getText().length());
+        phoneEditText.setText(DEFAULT_PHONE);
+        phoneEditText.setSelection(phoneEditText.getText().toString().length());
     }
 
     @Override
@@ -48,6 +56,10 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
     public void onClick(View v) {
         switch(v.getId()) {
             case R.id.register:
+                if(!DEFAULT_PASSWORD.equals(passwordEditText.getText().toString())||!DEFAULT_PHONE.equals(phoneEditText.getText().toString())){
+                    Toast.makeText(RegisterActivity.this, "密码不正确", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 Animation animation = AnimationUtils.loadAnimation(RegisterActivity.this,R.anim.alpha);
                 animation.setAnimationListener(new Animation.AnimationListener() {
                     @Override

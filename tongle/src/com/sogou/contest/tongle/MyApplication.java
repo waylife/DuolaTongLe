@@ -18,7 +18,12 @@ public class MyApplication extends Application {
 		Logger.isLog=true;//发布正式环境打印改为false
 		if(!mDataInited){
 			mDataInited=true;
-			DbMock.mockDbData(this);
+			new Thread(new Runnable() {
+				@Override
+				public void run() {
+					DbMock.mockDbData(MyApplication.this);
+				}
+			}).start();
 		}
 	}
 

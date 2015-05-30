@@ -7,7 +7,7 @@ import java.text.DecimalFormat;
  */
 public class FormatUtil {
     public static String formatDistance(int distance){
-        DecimalFormat fnum   =   new   DecimalFormat("##KM");
+        DecimalFormat fnum   =   new   DecimalFormat("距离##KM");
         return fnum.format(distance/1000);
     }
 
