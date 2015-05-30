@@ -20,7 +20,7 @@ public class FindActivityFragment extends BaseSearchTabFragment {
     @Override
     public void doCreate(View view) {
         mList = new ArrayList<String>();
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 10; i++) {
             mList.add(i + "");
         }
         setHeadImage(R.drawable.find_activity_top);
