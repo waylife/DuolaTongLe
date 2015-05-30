@@ -16,12 +16,13 @@
         <Button
             android:id="@+id/setting_cancel"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10sp"
             android:background="#227FAB"
             android:text="取消"
+            android:textColor="@android:color/white"
             android:textSize="20sp" />
 
         <TextView
@@ -36,12 +37,13 @@
         <Button
             android:id="@+id/setting_save"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
             android:background="#227FAB"
             android:text="保存"
+            android:textColor="@android:color/white"
             android:textSize="20sp" />
     </RelativeLayout>
 
@@ -91,7 +93,8 @@
                         android:layout_alignParentLeft="true"
                         android:layout_centerVertical="true"
                         android:text="头像"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
                 </RelativeLayout>
 
                 <LinearLayout
@@ -110,12 +113,13 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/setting_head_view_layout"
                         android:text="家长姓名"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
 
                     <EditText
                         android:id="@+id/setting_parent_et"
                         android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="42dp"
                         android:layout_marginLeft="5dp"
                         android:background="@drawable/register_input_bg"
                         android:focusable="true"
@@ -136,12 +140,13 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/setting_head_view_layout"
                         android:text="糖猫帐号"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
 
                     <EditText
                         android:id="@+id/setting_tangmao_account_et"
                         android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="42dp"
                         android:layout_marginLeft="5dp"
                         android:background="@drawable/register_input_bg" />
                 </LinearLayout>
@@ -155,7 +160,7 @@
                 android:padding="5dp"
                 android:text="宝宝成长信息"
                 android:textColor="#2380AF"
-                android:textSize="15sp" />
+                android:textSize="18dp" />
 
             <RelativeLayout
                 android:layout_width="fill_parent"
@@ -172,7 +177,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="年龄"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
 
                     <TextView
                         android:id="@+id/setting_grade_name"
@@ -180,7 +186,8 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:text="5岁"
-                        android:textColor="@android:color/white" />
+                        android:textColor="@android:color/white"
+                        android:textSize="18dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -194,7 +201,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="性别"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
 
                     <TextView
                         android:id="@+id/setting_sex_tv"
@@ -202,7 +210,8 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:text="女"
-                        android:textColor="@android:color/white" />
+                        android:textColor="@android:color/white"
+                        android:textSize="18dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -218,7 +227,8 @@
                         android:layout_weight="1"
                         android:singleLine="true"
                         android:text="兴趣标签"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
 
                     <TextView
                         android:id="@+id/setting_interest_tv"
@@ -227,7 +237,8 @@
                         android:layout_weight="2"
                         android:gravity="center_horizontal"
                         android:text="#钢琴#"
-                        android:textColor="@android:color/white" />
+                        android:textColor="@android:color/white"
+                        android:textSize="18dp" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -249,7 +260,8 @@
                         android:layout_weight="1"
                         android:singleLine="true"
                         android:text="地点标签"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
 
                     <TextView
                         android:id="@+id/setting_position_tv"
@@ -258,7 +270,8 @@
                         android:layout_weight="2"
                         android:gravity="center_horizontal"
                         android:text="#五道口#"
-                        android:textColor="@android:color/white" />
+                        android:textColor="@android:color/white"
+                        android:textSize="18dp" />
 
                     <ImageView
                         android:layout_width="wrap_content"
