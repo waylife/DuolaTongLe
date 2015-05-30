@@ -11,27 +11,25 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.sogou.contest.tongle.R;
+import com.sogou.contest.tongle.adapter.ActivityAdapter;
 import com.sogou.contest.tongle.fragment.base.BaseSearchTabFragment;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 找朋友
  */
-<<<<<<< HEAD
 public class FindFriendFragment extends BaseSearchTabFragment {
-
-	@Override
-	public void doCreate(View view) {
-		setAdapter(new BaseAdapter[]{},new String[]{"热门","附近","糖猫"});
-	}
-=======
-public class FindFriendFragment extends Fragment {
-    private View view;
+    private List<String> mList;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.findpager, null);
-        return view;
+    public void doCreate(View view) {
+        mList = new ArrayList<String>();
+        for (int i = 0; i < 20; i++) {
+            mList.add(i + "");
+        }
+        setAdapter(new BaseAdapter[]{new ActivityAdapter(mList, getActivity()),
+                new ActivityAdapter(mList, getActivity()), new ActivityAdapter(mList, getActivity())}, new String[]{"热门", "附近", "糖猫"});
     }
-
->>>>>>> 511ba5fdb8683ecbff55bc49932500e896bfeb0b
 }

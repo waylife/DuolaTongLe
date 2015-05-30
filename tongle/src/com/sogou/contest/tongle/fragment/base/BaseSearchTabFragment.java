@@ -44,7 +44,7 @@ public abstract class BaseSearchTabFragment extends Fragment {
     private void initView() {
         mListView = (ListView) mMainView.findViewById(R.id.listview);
         mHeaderImage = (ImageView) mMainView.findViewById(R.id.head_image);
-        mTabs = new EditText[3];
+        mTabs = new TextView[3];
         mHeaderView = getHeaderView(mInflater);
         mListView.addHeaderView(mHeaderView);
         //init views
@@ -63,7 +63,7 @@ public abstract class BaseSearchTabFragment extends Fragment {
     }
 
     public void setAdapter(BaseAdapter[] adapters, String[] tabsTitle) {
-        if (adapters == null || adapters.length == 0 || adapters.length >= 3)
+        if (adapters == null || adapters.length == 0 || adapters.length > 3)
             throw new IllegalArgumentException("adapters can not be empty, null, or bigger than 3");
         if (tabsTitle == null || tabsTitle.length != adapters.length) {
             throw new IllegalArgumentException("adapter's length is not equal to tabsTitle's");
