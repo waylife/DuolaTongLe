@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_green_dark"
+    android:background="@drawable/register_bg"
     android:orientation="vertical"
     tools:context="com.sogou.contest.tongle.activity.SettingActivity">
 
@@ -19,7 +19,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:text="取消" />
+            android:text="取消"
+            />
 
         <TextView
             android:layout_width="100dp"
@@ -54,7 +55,8 @@
                 android:background="@android:color/white"
                 android:padding="5dp"
                 android:text="基本信息"
-                android:textColor="#0000ff" />
+                android:textColor="#2380AF"
+                android:textSize="15sp"/>
 
             <RelativeLayout
                 android:layout_width="fill_parent"
@@ -136,7 +138,8 @@
                 android:background="@android:color/white"
                 android:padding="5dp"
                 android:text="宝宝成长信息"
-                android:textColor="#0000ff" />
+                android:textColor="#2380AF"
+                android:textSize="15sp"/>
 
             <RelativeLayout
                 android:layout_width="fill_parent"
@@ -214,7 +217,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_launcher" />
+                        android:src="@drawable/me_arrow_icon" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -245,7 +248,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_launcher" />
+                        android:src="@drawable/me_arrow_icon" />
                 </LinearLayout>
             </RelativeLayout>
         </LinearLayout>
