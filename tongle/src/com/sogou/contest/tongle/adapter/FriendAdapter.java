@@ -105,6 +105,7 @@ public class FriendAdapter extends BaseAdapter implements ISearchTab{
         }else{
             selector.orderBy("tangmaoAccount desc, distance",false);
         }
+
         Log.e("error", selector.toString());
         List<FrientEntity> list = new ArrayList<FrientEntity>();
         try {
