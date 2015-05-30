@@ -26,9 +26,6 @@
         android:id="@+id/head_image"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
-<<<<<<< HEAD
         android:layout_marginTop="3dp"
-=======
->>>>>>> 680391acf521fc472e798209596a8f8ad3c65dc1
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
