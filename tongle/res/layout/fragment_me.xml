@@ -57,6 +57,7 @@
             android:background="@android:color/white" />
 
         <LinearLayout
+            android:id="@+id/focused_friend"
             android:layout_width="fill_parent"
             android:layout_height="@dimen/me_item_height"
             android:layout_marginLeft="20dp"
@@ -103,14 +104,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:src="@drawable/reseach_icon" />
+                android:src="@drawable/publish_activity_icon"
+                />
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="10"
-                android:text="我参加的活动" />
+                android:text="我参加的活动"
+                />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -121,6 +124,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/publish_activity"
             android:layout_width="fill_parent"
             android:layout_height="@dimen/me_item_height"
             android:layout_marginLeft="20dp"

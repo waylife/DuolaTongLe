@@ -54,6 +54,24 @@
             android:exported="true" >
         </provider>
 
+
+        <activity
+            android:name=".activity.FocusedFriendActivity"
+            android:label="@string/focused_friends"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".activity.BaseActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sogou.contest.tongle.activity.BaseActivity" />
+        </activity>
+
+        <activity android:name=".activity.PublishActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sogou.contest.tongle.activity.BaseActivity" />
+        </activity>
+
         <activity
             android:name=".activity.SettingActivity"
             android:label="@string/title_activity_setting"

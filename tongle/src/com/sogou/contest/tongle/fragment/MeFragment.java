@@ -8,9 +8,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.sogou.contest.tongle.R;
+import com.sogou.contest.tongle.activity.FocusedFriendActivity;
+import com.sogou.contest.tongle.activity.PublishActivity;
 import com.sogou.contest.tongle.activity.SettingActivity;
 
 /**
@@ -20,6 +24,8 @@ public class MeFragment extends Fragment {
 
 	private View mMainView;
 	private ImageButton mSettingIb;
+	private LinearLayout focused_friend;
+	private LinearLayout publish_activity;
 	private ListView xlistview;
 	private List<?> list;
 	
@@ -38,6 +44,23 @@ public class MeFragment extends Fragment {
 				SettingActivity.actionTo(getActivity());
 			}
 		});
+
+		focused_friend = (LinearLayout)mMainView.findViewById(R.id.focused_friend);
+		focused_friend.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				FocusedFriendActivity.actionTo(getActivity());
+			}
+		});
+
+		publish_activity = (LinearLayout)mMainView.findViewById(R.id.publish_activity);
+		publish_activity.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				PublishActivity.actionTo(getActivity());
+			}
+		});
+
 	}
 
 

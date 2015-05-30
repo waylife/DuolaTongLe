@@ -9,7 +9,7 @@
         android:id="@+id/head_view"
         android:layout_width="fill_parent"
         android:layout_height="@dimen/view_head_height"
-        android:background="#b2b2b2" />
+        android:background="#96A2B3" />
 
 
     <ListView
@@ -24,7 +24,7 @@
 
     <ImageView
         android:id="@+id/head_image"
-        android:layout_width="115dp"
-        android:layout_height="55dp"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

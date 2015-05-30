@@ -42,14 +42,27 @@
             android:textColor="@color/white"
             android:textSize="18dp" />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
 
     <ImageView
         android:id="@+id/head_view_add"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:layout_marginRight="5dp"
         android:layout_weight="1"
-        android:background="@drawable/head_view_add"
-        android:gravity="center" />
+        android:background="@drawable/me_myfriend_icon"
+        android:gravity="center"
+       />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已关注"
+        android:textColor="@color/white"/>
+    </LinearLayout>
 
 </LinearLayout>
