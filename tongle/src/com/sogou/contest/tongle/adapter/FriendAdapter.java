@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.github.siyamed.shapeimageview.CircularImageView;
 import com.lidroid.xutils.BitmapUtils;
@@ -68,7 +69,7 @@ public class FriendAdapter extends BaseAdapter implements ISearchTab{
         }
         FrientEntity item = lists.get(position);
         if(item!=null){
-            holder.head_view_civ.setBackgroundResource(item.getAvatar());
+            holder.head_view_civ.setImageResource(item.getAvatar());
             holder.head_view_distance.setText(FormatUtil.formatDistance(item.getDistance()));
             holder.head_view_uname.setText(item.getName());
             if(TextUtils.isEmpty(item.getTangmaoAccount())){
@@ -94,6 +95,9 @@ public class FriendAdapter extends BaseAdapter implements ISearchTab{
     public void getData(List data) {
         lists=data;
         this.notifyDataSetChanged();
+        if(lists==null||lists.size()==0){
+            Toast.makeText(mContext,"没有搜索到结果",Toast.LENGTH_SHORT).show();
+        }
     }
 
     private List<FrientEntity> getSearchResult(String tag,int tab) {

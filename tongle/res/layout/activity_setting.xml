@@ -181,7 +181,7 @@
                         android:textSize="18dp" />
 
                     <TextView
-                        android:id="@+id/setting_grade_name"
+                        android:id="@+id/setting_grade_tv"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"

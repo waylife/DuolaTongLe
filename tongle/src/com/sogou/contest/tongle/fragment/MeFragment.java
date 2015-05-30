@@ -11,7 +11,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
+import com.sogou.contest.tongle.MyApplication;
 import com.sogou.contest.tongle.R;
 import com.sogou.contest.tongle.activity.FocusedFriendActivity;
 import com.sogou.contest.tongle.activity.PublishActivity;
@@ -26,6 +28,7 @@ public class MeFragment extends Fragment {
 	private ImageButton mSettingIb;
 	private LinearLayout focused_friend;
 	private LinearLayout publish_activity;
+	private TextView mNameTv;
 	private ListView xlistview;
 	private List<?> list;
 	
@@ -61,6 +64,8 @@ public class MeFragment extends Fragment {
 			}
 		});
 
+		mNameTv=(TextView)mMainView.findViewById(R.id.setting_name);
+		mNameTv.setText(MyApplication.getApp().getSelfEntity().getName());
 	}
 
 

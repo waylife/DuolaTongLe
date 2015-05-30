@@ -13,6 +13,7 @@
         android:background="#96A3B4">
 
         <TextView
+            android:id="@+id/setting_name"
             android:layout_width="100dp"
             android:layout_height="fill_parent"
             android:layout_centerHorizontal="true"

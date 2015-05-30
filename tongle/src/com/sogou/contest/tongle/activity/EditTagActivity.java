@@ -8,9 +8,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.sogou.contest.tongle.MyApplication;
 import com.sogou.contest.tongle.R;
+import com.sogou.contest.tongle.db.entity.FrientEntity;
 
 public class EditTagActivity extends BaseActivity {
+    FrientEntity mEntity=null;
 
     public static void actionTo(Context context){
         Intent intent=new Intent(context,EditTagActivity.class);
@@ -43,6 +46,10 @@ public class EditTagActivity extends BaseActivity {
 
         findViewById(R.id.setting_save).setOnClickListener(onClickListener);
         findViewById(R.id.setting_cancel).setOnClickListener(onClickListener);
+
+        //loading values
+        mEntity= MyApplication.getApp().getSelfEntity();
+
     }
 
 }
