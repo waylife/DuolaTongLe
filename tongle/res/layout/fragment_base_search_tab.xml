@@ -11,13 +11,7 @@
         android:layout_height="@dimen/view_head_height"
         android:background="#b2b2b2" />
 
-    <ImageView
-        android:id="@+id/head_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/ic_launcher" />
+
 
     <ListView
         android:id="@+id/listview"
@@ -26,4 +20,11 @@
         android:layout_below="@+id/head_view"
         android:cacheColorHint="#00000000"></ListView>
 
+    <ImageView
+        android:id="@+id/head_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_launcher" />
 </RelativeLayout>

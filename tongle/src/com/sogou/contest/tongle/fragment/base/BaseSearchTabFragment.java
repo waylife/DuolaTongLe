@@ -56,7 +56,7 @@ public abstract class BaseSearchTabFragment extends Fragment {
 
 
     private void search(String text) {
-        if (mAdapters == null || mAdapters.length == 0 || mAdapters.length >= 3) {
+        if (mAdapters == null || mAdapters.length == 0 || mAdapters.length > 3) {
             return;
         }
         Toast.makeText(getActivity(),"正在搜索:"+text,Toast.LENGTH_SHORT).show();
@@ -123,7 +123,7 @@ public abstract class BaseSearchTabFragment extends Fragment {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_SEARCH) {
-                    search(v.getText().toString());
+                    search(mSearchEt.getText().toString());
                 }
                 return false;
             }
