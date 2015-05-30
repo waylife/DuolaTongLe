@@ -41,7 +41,7 @@ public abstract class BaseSearchTabFragment extends Fragment {
 
     public abstract void doCreate(View view);
 
-    public void setHeadImage(int resId){
+    public void setHeadImage(int resId) {
         mHeaderImage.setImageResource(resId);
     }
 
@@ -59,7 +59,7 @@ public abstract class BaseSearchTabFragment extends Fragment {
         if (mAdapters == null || mAdapters.length == 0 || mAdapters.length > 3) {
             return;
         }
-        Toast.makeText(getActivity(),"正在搜索:"+text,Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), "正在搜索:" + text, Toast.LENGTH_SHORT).show();
         for (int i = 0; i < mAdapters.length; i++) {
             if (mAdapters[i] instanceof ISearchTab) {
                 ((ISearchTab) mAdapters[i]).updateData(text);
@@ -97,12 +97,16 @@ public abstract class BaseSearchTabFragment extends Fragment {
         setTabsBackGround(0);
     }
 
-    private void setTabsBackGround(int selected){
+    private void setTabsBackGround(int selected) {
         for (int i = 0; i < mAdapters.length; i++) {
-            if(selected==i){
+            if (selected == i) {
                 mTabs[i].setBackgroundColor(Color.RED);
-            }else {
-                mTabs[i].setBackgroundResource(0);
+            } else {
+                if (selected == i) {
+                    mTabs[i].setBackgroundColor(getActivity().getResources().getColor(R.color.tab_selected));
+                } else {
+                    mTabs[i].setBackgroundResource(0);
+                }
             }
         }
     }
@@ -113,7 +117,7 @@ public abstract class BaseSearchTabFragment extends Fragment {
         mTabs[0] = (TextView) headView.findViewById(R.id.view_head_search_tab1);
         mTabs[1] = (TextView) headView.findViewById(R.id.view_head_search_tab2);
         mTabs[2] = (TextView) headView.findViewById(R.id.view_head_search_tab3);
-        for (int i = 0; i <mTabs.length; i++) {
+        for (int i = 0; i < mTabs.length; i++) {
             mTabs[i].setVisibility(View.GONE);
         }
 

@@ -18,13 +18,15 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_below="@+id/head_view"
-        android:cacheColorHint="#00000000"></ListView>
+        android:scrollbars="none"
+        android:dividerHeight="5px"
+        android:divider="@android:color/white"
+        android:cacheColorHint="@color/transparent"></ListView>
 
     <ImageView
         android:id="@+id/head_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/ic_launcher" />
+        android:src="@drawable/find_activity_top" />
 </RelativeLayout>
