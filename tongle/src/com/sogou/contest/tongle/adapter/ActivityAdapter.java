@@ -3,22 +3,18 @@ package com.sogou.contest.tongle.adapter;
 import java.util.List;
 
 import android.content.Context;
-import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.ImageView.ScaleType;
 import android.widget.TextView;
 
 import com.github.siyamed.shapeimageview.CircularImageView;
 import com.lidroid.xutils.BitmapUtils;
 import com.sogou.contest.tongle.R;
-import com.sogou.contest.tongle.utils.Utils;
 
 public class ActivityAdapter extends BaseAdapter {
-
+    String TAG = ActivityAdapter.class.getSimpleName();
     private List<?> lists;
     private Context mContext;
     private BitmapUtils bitmapUtils;
@@ -49,7 +45,7 @@ public class ActivityAdapter extends BaseAdapter {
         ViewHolder holder = null;
         if (convertView == null) {
             holder = new ViewHolder();
-            convertView = View.inflate(mContext, R.layout.head_view, null);
+            convertView = View.inflate(mContext, R.layout.item_head_view, null);
             holder.head_view_civ = (CircularImageView) convertView.findViewById(R.id.head_view_civ);
             holder.head_view_info = (TextView) convertView.findViewById(R.id.head_view_info);
             holder.head_view_distance = (ImageView) convertView.findViewById(R.id.head_view_distance);
@@ -57,14 +53,15 @@ public class ActivityAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        for (int i = 0; i < lists.size(); i++) {
-            if(i%3==0){
-
-            }else if(i%3==1){
-
-            }else if(i%3==2){
-                
-            }
+        if (position % 3 == 0) {
+            holder.head_view_civ.setBackgroundResource(R.drawable.head_view_civ_xqx);
+            holder.head_view_info.setBackgroundResource(R.drawable.head_view_des_xx);
+        } else if (position % 3 == 1) {
+            holder.head_view_civ.setBackgroundResource(R.drawable.head_view_civ_nn);
+            holder.head_view_info.setBackgroundResource(R.drawable.head_view_des_nn);
+        } else if (position % 3 == 2) {
+            holder.head_view_civ.setBackgroundResource(R.drawable.head_view_civ_fj);
+            holder.head_view_info.setBackgroundResource(R.drawable.head_view_des_fj);
         }
         Object object = lists.get(position);
         return convertView;
