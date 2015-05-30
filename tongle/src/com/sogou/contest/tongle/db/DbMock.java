@@ -17,8 +17,8 @@ import java.util.Random;
  * Created by rxread on 5/31/15.
  */
 public class DbMock {
-    private static String []POSITION_TAGS="五道口#天通苑#回龙观#西单#鸟巢#北京西站#国贸#苹果园#五棵松#宛城#大望路#圆明园西#香山#周口店#慕田峪#白河峡谷#天安门".split("#");
-    private static String []INTEREST_TAGS="游泳#读书#乒乓球#滑冰#画画#下棋#搞毛线#搜狗#糖猫".split("#");
+    private static String []POSITION_TAGS="中国#北京#搜狐#五道口#天通苑#回龙观#西单#鸟巢#北京西站#国贸#苹果园#五棵松#宛城#大望路#圆明园西#香山#周口店#慕田峪#白河峡谷#天安门".split("#");
+    private static String []INTEREST_TAGS="游泳#读书#乒乓球#滑冰#画画#下棋#搞毛线#搜狗#糖猫#围棋#滑雪#象棋".split("#");
     private static int []AVATAR_BOY_RESIDS=new int[]{R.drawable.head_view_civ_xqx,R.drawable.head_view_civ_fj,R.drawable.ic_boy_1,R.drawable.ic_boy_2,R.drawable.ic_boy_3};
     private static int []AVATAR_GIRL_RESIDS=new int[]{R.drawable.head_view_civ_nn,R.drawable.ic_girl_1,R.drawable.ic_girl_2,R.drawable.ic_girl_3,R.drawable.ic_girl_4,R.drawable.ic_girl_5};
     public static void mockDbData(Context context) {
@@ -26,7 +26,7 @@ public class DbMock {
         dbUtils.configAllowTransaction(true);
         Random random = new Random(SystemClock.elapsedRealtime());
         try {
-            for (int i = 0; i < 1000; i++) {
+            for (int i = 0; i < 50; i++) {
                 if(i==0){
                     FrientEntity entity=getRandomFriend(random);
                     MyApplication.getApp().initSelfItem(entity);
@@ -118,7 +118,7 @@ public class DbMock {
     }
 
     public static String getRandomParentName(Random random){
-        if(random.nextInt(4)==1){
+        if(1==1){
             return RandomValue.getChineseName();
         }else{
             return "";

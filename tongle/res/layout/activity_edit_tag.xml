@@ -64,6 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:text="爱好标签"
+                android:id="@+id/edit_tag_name"
                 android:textColor="@android:color/white" />
 
             <TextView
@@ -81,7 +82,10 @@
             android:background="@android:color/white" />
 
         <GridView
+            android:id="@+id/edit_tag_gridview"
             android:layout_width="fill_parent"
+            android:gravity="center"
+            android:numColumns="3"
             android:layout_height="150dp"></GridView>
     </LinearLayout>
 </RelativeLayout>

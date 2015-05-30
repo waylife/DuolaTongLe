@@ -71,6 +71,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                     public void onAnimationEnd(Animation animation) {
                         Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                         startActivity(intent);
+                        RegisterActivity.this.finish();
                     }
 
                     @Override

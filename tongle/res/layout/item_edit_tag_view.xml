@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="百度"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:background="@drawable/register_input_bg"
+        android:id="@+id/item_edit_tag_text"
+        android:layout_margin="10dp"/>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/add_tag"
+        android:id="@+id/item_edit_tag_iv"/>
+</LinearLayout>

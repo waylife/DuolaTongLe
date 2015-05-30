@@ -7,16 +7,23 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.GridView;
+import android.widget.TextView;
 
 import com.sogou.contest.tongle.MyApplication;
 import com.sogou.contest.tongle.R;
+import com.sogou.contest.tongle.adapter.EditTagAdapter;
 import com.sogou.contest.tongle.db.entity.FrientEntity;
 
 public class EditTagActivity extends BaseActivity {
     FrientEntity mEntity=null;
+    private boolean isPositionTag;
+    GridView mGridView;
+    TextView mNameTv;
 
-    public static void actionTo(Context context){
+    public static void actionTo(Context context,boolean isPositionTag){
         Intent intent=new Intent(context,EditTagActivity.class);
+        intent.putExtra("is_position_tag",isPositionTag);
         context.startActivity(intent);
     }
 
@@ -46,9 +53,14 @@ public class EditTagActivity extends BaseActivity {
 
         findViewById(R.id.setting_save).setOnClickListener(onClickListener);
         findViewById(R.id.setting_cancel).setOnClickListener(onClickListener);
+        mGridView= (GridView) findViewById(R.id.edit_tag_gridview);
+        mNameTv= (TextView) findViewById(R.id.edit_tag_name);
 
         //loading values
+        isPositionTag=getIntent().getBooleanExtra("is_position_tag",false);
         mEntity= MyApplication.getApp().getSelfEntity();
+        mNameTv.setText(isPositionTag?"兴趣标签":"位置标签");
+        mGridView.setAdapter(new EditTagAdapter(this,isPositionTag?mEntity.getPositionTag():mEntity.getInterestTag()));
 
     }
 
