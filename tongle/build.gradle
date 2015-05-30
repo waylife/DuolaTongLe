@@ -11,6 +11,7 @@
 		compile 'com.android.support:appcompat-v7:21.0.0'
 		compile 'de.greenrobot:eventbus:2.4.0'
 		compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
+		compile 'uk.co.chrisjenx:calligraphy:2.1.0'
  //       compile project(':SogouKratos')
   //      compile files('libs/eventbus-2.4.0.jar')
     //    compile files('libs/libwebp.jar')
