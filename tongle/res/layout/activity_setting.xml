@@ -11,7 +11,7 @@
         android:id="@+id/head_view"
         android:layout_width="fill_parent"
         android:layout_height="@dimen/view_head_height"
-        android:background="#96A5B8">
+        android:background="#9f96A5B8">
 
         <Button
             android:id="@+id/setting_cancel"
@@ -154,7 +154,7 @@
                         android:layout_marginLeft="5dp"
                         android:background="@drawable/register_input_bg"
                         android:textColor="@color/white"
-                        android:layout_gravity="center"
+                        android:gravity="center"
                         />
                 </LinearLayout>
             </RelativeLayout>
