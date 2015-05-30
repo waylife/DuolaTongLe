@@ -8,14 +8,26 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
 
 import com.sogou.contest.tongle.R;
+<<<<<<< HEAD
+import com.sogou.contest.tongle.adapter.HomeAdapter;
+import com.sogou.contest.tongle.fragment.base.BaseSearchTabFragment;
+=======
 import com.sogou.contest.tongle.adapter.ActivityAdapter;
+>>>>>>> 511ba5fdb8683ecbff55bc49932500e896bfeb0b
 
 /**
  * 找活动
  */
+<<<<<<< HEAD
+public class FindActivityFragment extends BaseSearchTabFragment {
+	@Override
+	public void doCreate(View view) {
+		setAdapter(new BaseAdapter[]{},new String[]{"个人发起","商家发起"});
+=======
 public class FindActivityFragment extends Fragment {
 
 	private View view;
@@ -35,5 +47,6 @@ public class FindActivityFragment extends Fragment {
 		xListView.setAdapter(adapter);
 
 		return view;
+>>>>>>> 511ba5fdb8683ecbff55bc49932500e896bfeb0b
 	}
 }
