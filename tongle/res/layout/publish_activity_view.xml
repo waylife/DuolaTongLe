@@ -26,32 +26,40 @@
             />
     </RelativeLayout>
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp">
 
-    <TextView
-        android:layout_width="50dp"
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/publish_activity"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_centerInParent="true"
-        android:text="周末踏青"
-        android:textSize="20sp"/>
-
+        android:orientation="vertical">
     <TextView
-        android:layout_width="200dp"
-        android:layout_height="150dp"
-        android:layout_marginLeft="150px"
-        android:text="周末去玉渊潭公园"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="110dp"
+        android:text="活动：踏青"
         android:textSize="20sp"/>
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="150dp"
+            />
+    </LinearLayout>
         <Button
             android:id="@+id/person"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerInParent="true"
-            android:text="参加活动的人"
+            android:text="参加人员"
             android:textSize="20sp"/>
     </RelativeLayout>
 
