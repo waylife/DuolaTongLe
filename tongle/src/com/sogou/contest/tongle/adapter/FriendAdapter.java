@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,13 +26,11 @@ public class FriendAdapter extends BaseAdapter implements ISearchTab{
     String TAG = ActivityAdapter.class.getSimpleName();
     private List<FrientEntity> lists;
     private Context mContext;
-    private BitmapUtils bitmapUtils;
     DbUtils mDbUtils;
 
     public FriendAdapter(List<FrientEntity> list, Context ct) {
         this.lists = list;
         this.mContext = ct;
-        bitmapUtils = new BitmapUtils(ct);
         mDbUtils= DbUtils.create(ct);
         mDbUtils.configAllowTransaction(true);
     }
@@ -62,6 +61,7 @@ public class FriendAdapter extends BaseAdapter implements ISearchTab{
             holder.head_view_uname = (TextView) convertView.findViewById(R.id.head_view_uname);
             holder.head_view_distance = (TextView) convertView.findViewById(R.id.head_view_distance);
             holder.head_view_add = (ImageView) convertView.findViewById(R.id.head_view_add);
+            holder.head_tag=(ImageView)convertView.findViewById(R.id.item_friend_view_iv_tm);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
@@ -71,6 +71,11 @@ public class FriendAdapter extends BaseAdapter implements ISearchTab{
             holder.head_view_civ.setBackgroundResource(item.getAvatar());
             holder.head_view_distance.setText(FormatUtil.formatDistance(item.getDistance()));
             holder.head_view_uname.setText(item.getName());
+            if(TextUtils.isEmpty(item.getTangmaoAccount())){
+                holder.head_tag.setVisibility(View.GONE);
+            }else{
+                holder.head_tag.setVisibility(View.VISIBLE);
+            }
         }
         return convertView;
     }
@@ -92,7 +97,7 @@ public class FriendAdapter extends BaseAdapter implements ISearchTab{
     }
 
     private List<FrientEntity> getSearchResult(String tag,int tab) {
-        Selector selector=Selector.from(FrientEntity.class).where("positionTag","like","%"+tag+"%").and("interestTag","like","%"+tag+"%");
+        Selector selector=Selector.from(FrientEntity.class).where("positionTag","like","%"+tag+"%").or("interestTag", "like", "%" + tag + "%");
         if(tab==0){
             selector.orderBy("isPopular desc,distance ",false);
         }else if(tab==1){
@@ -115,5 +120,6 @@ public class FriendAdapter extends BaseAdapter implements ISearchTab{
         TextView head_view_uname;
         TextView head_view_distance;
         ImageView head_view_add;
+        ImageView head_tag;
     }
 }
