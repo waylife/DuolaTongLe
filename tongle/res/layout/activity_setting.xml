@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_green_dark"
+    android:background="@drawable/register_bg"
     android:orientation="vertical"
     tools:context="com.sogou.contest.tongle.activity.SettingActivity">
 
@@ -11,7 +11,7 @@
         android:id="@+id/head_view"
         android:layout_width="fill_parent"
         android:layout_height="@dimen/view_head_height"
-        android:background="#b2b2b2">
+        android:background="#96A5B8">
 
         <Button
             android:id="@+id/setting_cancel"
@@ -19,7 +19,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:text="取消" />
+            android:layout_marginLeft="10sp"
+            android:background="#227FAB"
+            android:text="取消"
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="100dp"
@@ -27,7 +30,8 @@
             android:layout_centerHorizontal="true"
             android:background="@android:color/white"
             android:gravity="center"
-            android:text="设置" />
+            android:text="设置"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/setting_save"
@@ -35,7 +39,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:text="保存" />
+            android:layout_marginRight="10dp"
+            android:background="#227FAB"
+            android:text="保存"
+            android:textSize="20sp" />
     </RelativeLayout>
 
     <ScrollView
@@ -49,12 +56,13 @@
 
             <TextView
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:layout_marginTop="10dp"
                 android:background="@android:color/white"
                 android:padding="5dp"
                 android:text="基本信息"
-                android:textColor="#0000ff" />
+                android:textColor="#2380AF"
+                android:textSize="15sp" />
 
             <RelativeLayout
                 android:layout_width="fill_parent"
@@ -89,10 +97,11 @@
                 <LinearLayout
                     android:id="@+id/setting_parent_name_layout"
                     android:layout_width="fill_parent"
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
                     android:layout_height="@dimen/setting_item_height"
                     android:layout_below="@+id/setting_head_view_layout"
+                    android:layout_marginTop="10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
                     android:gravity="center">
 
                     <TextView
@@ -101,15 +110,16 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/setting_head_view_layout"
                         android:text="家长姓名"
-                        android:focusable="true"
                         android:textColor="@color/white" />
 
                     <EditText
                         android:id="@+id/setting_parent_et"
-                        android:focusable="true"
-                        android:focusableInTouchMode="true"
                         android:layout_width="fill_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/register_input_bg"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -117,6 +127,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="@dimen/setting_item_height"
                     android:layout_below="@+id/setting_parent_name_layout"
+                    android:layout_marginTop="10dp"
                     android:gravity="center">
 
                     <TextView
@@ -130,18 +141,21 @@
                     <EditText
                         android:id="@+id/setting_tangmao_account_et"
                         android:layout_width="fill_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/register_input_bg" />
                 </LinearLayout>
             </RelativeLayout>
 
             <TextView
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:layout_marginTop="10dp"
                 android:background="@android:color/white"
                 android:padding="5dp"
                 android:text="宝宝成长信息"
-                android:textColor="#0000ff" />
+                android:textColor="#2380AF"
+                android:textSize="15sp" />
 
             <RelativeLayout
                 android:layout_width="fill_parent"
@@ -219,7 +233,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_launcher" />
+                        android:src="@drawable/me_arrow_icon" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -250,7 +264,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_launcher" />
+                        android:src="@drawable/me_arrow_icon" />
                 </LinearLayout>
             </RelativeLayout>
         </LinearLayout>
