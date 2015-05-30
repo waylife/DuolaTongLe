@@ -2,8 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/tongle_bg"
     android:orientation="vertical"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/mViewPager"
@@ -15,27 +16,28 @@
     <LinearLayout
         android:id="@+id/mLinearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:layout_height="@dimen/tongle_bottom_height"
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/bt1"
             android:layout_width="75dp"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:layout_weight="1"
             android:text="找朋友" />
 
         <Button
             android:id="@+id/bt2"
             android:layout_width="75dp"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:layout_weight="1"
             android:text="找活动" />
 
         <Button
             android:id="@+id/bt3"
             android:layout_width="75dp"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:layout_weight="1"
             android:text="我" />
     </LinearLayout>

@@ -16,10 +16,22 @@ import com.sogou.contest.tongle.fragment.base.BaseSearchTabFragment;
 /**
  * 找朋友
  */
+<<<<<<< HEAD
 public class FindFriendFragment extends BaseSearchTabFragment {
 
 	@Override
 	public void doCreate(View view) {
 		setAdapter(new BaseAdapter[]{},new String[]{"热门","附近","糖猫"});
 	}
+=======
+public class FindFriendFragment extends Fragment {
+    private View view;
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.findpager, null);
+        return view;
+    }
+
+>>>>>>> 511ba5fdb8683ecbff55bc49932500e896bfeb0b
 }
