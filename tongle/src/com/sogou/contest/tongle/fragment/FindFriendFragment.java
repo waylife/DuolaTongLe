@@ -32,5 +32,6 @@ public class FindFriendFragment extends BaseSearchTabFragment {
         }
         setAdapter(new BaseAdapter[]{new FriendAdapter(mList, getActivity()),
                 new FriendAdapter(mList, getActivity()), new FriendAdapter(mList, getActivity())}, new String[]{"热门", "附近", "糖猫"});
+
     }
 }

@@ -10,7 +10,7 @@
         android:id="@id/head_view"
         android:layout_width="fill_parent"
         android:layout_height="@dimen/view_head_height"
-        android:background="#b2b2b2">
+        android:background="#96A3B4">
 
         <TextView
             android:layout_width="100dp"
@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:src="@drawable/ic_launcher" />
+            android:src="@drawable/me_setting_icon" />
     </RelativeLayout>
 
 
@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_launcher" />
+                android:src="@drawable/me_myfriend_icon" />
 
             <TextView
                 android:layout_width="fill_parent"
@@ -82,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_launcher" />
+                android:src="@drawable/me_arrow_icon" />
         </LinearLayout>
 
         <LinearLayout
@@ -101,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_launcher" />
+                android:src="@drawable/reseach_icon" />
 
             <TextView
                 android:layout_width="fill_parent"
@@ -115,7 +115,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_launcher" />
+                android:src="@drawable/me_arrow_icon" />
         </LinearLayout>
 
         <LinearLayout
@@ -134,7 +134,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_launcher" />
+                android:src="@drawable/me_activity_icon" />
 
             <TextView
                 android:layout_width="fill_parent"
@@ -148,7 +148,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_launcher" />
+                android:src="@drawable/me_arrow_icon" />
         </LinearLayout>
     </LinearLayout>
 
