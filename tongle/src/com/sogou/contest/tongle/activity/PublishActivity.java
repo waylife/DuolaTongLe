@@ -32,7 +32,10 @@ public class PublishActivity extends BaseActivity{
                 int id=v.getId();
                 switch(id){
                     case R.id.person:
-                        FocusedFriendActivity.actionTo(PublishActivity.this);
+                        JoinedActivity.actionTo(PublishActivity.this);
+                        break;
+                    case R.id.back_imageView2:
+                        PublishActivity.this.finish();
                         break;
 
                 }
@@ -40,6 +43,7 @@ public class PublishActivity extends BaseActivity{
         };
 
         findViewById(R.id.person).setOnClickListener(onClickListener);
+        findViewById(R.id.back_imageView2).setOnClickListener(onClickListener);
 
 
     }

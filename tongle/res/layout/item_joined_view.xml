@@ -48,22 +48,22 @@
         android:orientation="vertical"
         android:gravity="center">
 
-    <ImageView
-        android:id="@+id/head_view_add"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginRight="5dp"
-        android:layout_weight="1"
-        android:background="@drawable/me_myfriend_icon"
-        android:gravity="center"
-       />
+        <ImageView
+            android:id="@+id/head_view_add"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/me_myfriend_icon"
+            android:gravity="center"
+            />
 
-    <TextView
-        android:id="@+id/flag"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="已关注"
-        android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已关注"
+            android:textColor="@color/white"/>
     </LinearLayout>
 
 </LinearLayout>
