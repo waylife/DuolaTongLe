@@ -26,6 +26,11 @@
             android:layout_height="fill_parent"
             android:layout_marginLeft="10dp"
             android:layout_centerVertical="true"
+            android:cursorVisible="true"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
             android:background="@android:color/white"
             android:hint="搜索你感兴趣的标签"/>
     </RelativeLayout>

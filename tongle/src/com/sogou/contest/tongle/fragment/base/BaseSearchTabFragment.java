@@ -1,15 +1,19 @@
 package com.sogou.contest.tongle.fragment.base;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.sogou.contest.tongle.R;
 
@@ -55,6 +59,7 @@ public abstract class BaseSearchTabFragment extends Fragment {
         if (mAdapters == null || mAdapters.length == 0 || mAdapters.length >= 3) {
             return;
         }
+        Toast.makeText(getActivity(),"正在搜索:"+text,Toast.LENGTH_SHORT).show();
         for (int i = 0; i < mAdapters.length; i++) {
             if (mAdapters[i] instanceof ISearchTab) {
                 ((ISearchTab) mAdapters[i]).updateData(text);
@@ -78,6 +83,7 @@ public abstract class BaseSearchTabFragment extends Fragment {
                     return;
                 }
                 mListView.setAdapter(mAdapters[index]);
+                setTabsBackGround(index);
             }
         };
         for (int i = 0; i < adapters.length; i++) {
@@ -87,6 +93,18 @@ public abstract class BaseSearchTabFragment extends Fragment {
             mTabs[i].setOnClickListener(onClickListener);
         }
         mListView.setAdapter(mAdapters[0]);
+        mTabs[0].setBackgroundColor(Color.RED);
+        setTabsBackGround(0);
+    }
+
+    private void setTabsBackGround(int selected){
+        for (int i = 0; i < mAdapters.length; i++) {
+            if(selected==i){
+                mTabs[i].setBackgroundColor(Color.RED);
+            }else {
+                mTabs[i].setBackgroundResource(0);
+            }
+        }
     }
 
     private View getHeaderView(LayoutInflater inflater) {
@@ -95,9 +113,21 @@ public abstract class BaseSearchTabFragment extends Fragment {
         mTabs[0] = (TextView) headView.findViewById(R.id.view_head_search_tab1);
         mTabs[1] = (TextView) headView.findViewById(R.id.view_head_search_tab2);
         mTabs[2] = (TextView) headView.findViewById(R.id.view_head_search_tab3);
-        for (int i = 0; i > mTabs.length; i++) {
+        for (int i = 0; i <mTabs.length; i++) {
             mTabs[i].setVisibility(View.GONE);
         }
+
+        mSearchEt.onEditorAction(EditorInfo.IME_ACTION_SEARCH);
+        mSearchEt.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                    search(v.getText().toString());
+                }
+                return false;
+            }
+        });
 
         return headView;
     }
