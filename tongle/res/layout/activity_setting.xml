@@ -101,10 +101,13 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/setting_head_view_layout"
                         android:text="家长姓名"
+                        android:focusable="true"
                         android:textColor="@color/white" />
 
                     <EditText
                         android:id="@+id/setting_parent_et"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
