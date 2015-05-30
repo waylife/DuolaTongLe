@@ -2,65 +2,77 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/register_bg">
+    android:background="@drawable/register_bg"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="#96A5B8"
-        >
+        android:layout_height="@dimen/view_head_height"
+        android:background="#96A5B8">
+
         <ImageView
             android:id="@+id/back_imageView2"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
-            android:src="@drawable/back_arrow_icon"/>
+            android:src="@drawable/back_arrow_icon" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
-            android:text="我发起的活动"
-            android:textSize="20sp"
             android:gravity="center"
-            />
+            android:text="我发起的活动"
+            android:textSize="20sp" />
     </RelativeLayout>
 
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp">
+        android:layout_margin="20dp">
 
         <ImageView
+            android:id="@+id/publish_left_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/publish_activity"
             android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"/>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-    <TextView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginLeft="110dp"
-        android:text="活动：踏青"
-        android:textSize="20sp"/>
-        <TextView
-            android:layout_width="170dp"
-            android:layout_height="150dp"
-            />
-    </LinearLayout>
-        <Button
-            android:id="@+id/person"
-            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/publish_activity" />
+
+        <RelativeLayout
+            android:layout_toRightOf="@+id/publish_left_image"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerInParent="true"
-            android:text="参加人员"
-            android:textSize="20sp"/>
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:text="活动：踏青"
+                android:id="@+id/publish_activity_name"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_alignLeft="@+id/publish_activity_name"
+                android:layout_below="@+id/publish_activity_name"
+                android:text="出发时间:2015-5-31"/>
+            <Button
+                android:id="@+id/person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:text="参加人员"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+
     </RelativeLayout>
 
 </LinearLayout>
