@@ -3,6 +3,7 @@ package com.sogou.contest.tongle.fragment;
 import android.view.View;
 import android.widget.BaseAdapter;
 
+import com.sogou.contest.tongle.R;
 import com.sogou.contest.tongle.adapter.ActivityAdapter;
 import com.sogou.contest.tongle.adapter.FriendAdapter;
 import com.sogou.contest.tongle.fragment.base.BaseSearchTabFragment;
@@ -22,6 +23,7 @@ public class FindActivityFragment extends BaseSearchTabFragment {
         for (int i = 0; i < 20; i++) {
             mList.add(i + "");
         }
+        setHeadImage(R.drawable.find_activity_top);
         setAdapter(new BaseAdapter[]{
                 new ActivityAdapter(mList, getActivity()),
                 new ActivityAdapter(mList, getActivity())}, new String[]{"个人发起", "商家发起"});
