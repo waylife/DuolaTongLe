@@ -11,15 +11,18 @@
         android:id="@+id/head_view"
         android:layout_width="fill_parent"
         android:layout_height="@dimen/view_head_height"
-        android:background="#b2b2b2">
+        android:background="#96A5B8">
 
         <Button
             android:id="@+id/setting_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10sp"
             android:layout_centerVertical="true"
             android:text="取消"
+            android:textSize="20sp"
+            android:background="#227FAB"
             />
 
         <TextView
@@ -28,15 +31,19 @@
             android:layout_centerHorizontal="true"
             android:background="@android:color/white"
             android:gravity="center"
-            android:text="设置" />
+            android:text="设置"
+            android:textSize="20sp"/>
 
         <Button
             android:id="@+id/setting_save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:text="保存" />
+            android:text="保存"
+            android:textSize="20sp"
+            android:background="#227FAB"/>
     </RelativeLayout>
 
     <ScrollView
@@ -50,7 +57,7 @@
 
             <TextView
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:layout_marginTop="10dp"
                 android:background="@android:color/white"
                 android:padding="5dp"
@@ -95,7 +102,8 @@
                     android:focusableInTouchMode="true"
                     android:layout_height="@dimen/setting_item_height"
                     android:layout_below="@+id/setting_head_view_layout"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:layout_marginTop="10dp">
 
                     <TextView
                         android:id="@+id/setting_parent_name"
@@ -103,12 +111,15 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/setting_head_view_layout"
                         android:text="家长姓名"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        />
 
                     <EditText
                         android:id="@+id/setting_parent_et"
                         android:layout_width="fill_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/register_input_bg"
+                        android:layout_marginLeft="5dp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -116,7 +127,8 @@
                     android:layout_width="fill_parent"
                     android:layout_height="@dimen/setting_item_height"
                     android:layout_below="@+id/setting_parent_name_layout"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:layout_marginTop="10dp">
 
                     <TextView
                         android:id="@+id/setting_tangmao_account_name"
@@ -129,13 +141,15 @@
                     <EditText
                         android:id="@+id/setting_tangmao_account_et"
                         android:layout_width="fill_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/register_input_bg"
+                        android:layout_marginLeft="5dp"/>
                 </LinearLayout>
             </RelativeLayout>
 
             <TextView
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:layout_marginTop="10dp"
                 android:background="@android:color/white"
                 android:padding="5dp"
