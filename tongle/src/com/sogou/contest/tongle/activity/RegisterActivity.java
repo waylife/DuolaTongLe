@@ -1,4 +1,4 @@
-package com.sogou.contest.tongle;
+package com.sogou.contest.tongle.activity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,13 +10,16 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.sogou.contest.tongle.MainActivity;
+import com.sogou.contest.tongle.R;
+
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 /**
  * Created by bao on 2015/5/30.
  */
-public class RegisterActivity extends Activity implements View.OnClickListener {
+public class RegisterActivity extends BaseActivity implements View.OnClickListener {
 
     private Button registerButton;
     private Button cancelButton;

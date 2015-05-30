@@ -8,9 +8,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+import com.sogou.contest.tongle.activity.BaseActivity;
 import com.sogou.contest.tongle.adapter.FragmentAdapters;
 
-public class MainActivity extends FragmentActivity implements OnClickListener {
+public class MainActivity extends BaseActivity implements OnClickListener {
 
     private ViewPager mViewPager;
     private View currentButton;
