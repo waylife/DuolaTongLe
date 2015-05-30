@@ -100,14 +100,10 @@ public abstract class BaseSearchTabFragment extends Fragment {
     private void setTabsBackGround(int selected) {
         for (int i = 0; i < mAdapters.length; i++) {
             if (selected == i) {
-                mTabs[i].setBackgroundColor(Color.RED);
+                mTabs[i].setBackgroundColor(getActivity().getResources().getColor(R.color.tab_selected));
             } else {
-                if (selected == i) {
-                    mTabs[i].setBackgroundColor(getActivity().getResources().getColor(R.color.tab_selected));
-                } else {
                     mTabs[i].setBackgroundResource(0);
                 }
-            }
         }
     }
 
