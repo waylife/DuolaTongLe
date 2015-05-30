@@ -7,4 +7,5 @@
     <dimen name="tongle_bottom_height">62dp</dimen>
     <dimen name="me_item_height">40dp</dimen>
     <dimen name="me_item_gap">10dp</dimen>
+    <dimen name="setting_item_height">50dp</dimen>
 </resources>

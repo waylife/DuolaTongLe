@@ -1,0 +1,253 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_green_dark"
+    android:orientation="vertical"
+    tools:context="com.sogou.contest.tongle.activity.SettingActivity">
+
+    <RelativeLayout
+        android:id="@+id/head_view"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/view_head_height"
+        android:background="#b2b2b2">
+
+        <Button
+            android:id="@+id/setting_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="取消" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:text="设置" />
+
+        <Button
+            android:id="@+id/setting_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="保存" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:padding="5dp"
+                android:text="基本信息"
+                android:textColor="#0000ff" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/setting_head_view_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.github.siyamed.shapeimageview.CircularImageView
+                        android:id="@+id/setting_head_view_civ"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_weight="1"
+                        android:src="@drawable/head_view_civ_fj"
+                        app:siBorderColor="@color/white"
+                        app:siBorderWidth="0dp" />
+
+                    <TextView
+                        android:id="@+id/setting_avatar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="头像"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/setting_parent_name_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/setting_item_height"
+                    android:layout_below="@+id/setting_head_view_layout"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/setting_parent_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/setting_head_view_layout"
+                        android:text="家长姓名"
+                        android:textColor="@color/white" />
+
+                    <EditText
+                        android:id="@+id/setting_parent_et"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/setting_tangmao_account_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/setting_item_height"
+                    android:layout_below="@+id/setting_parent_name_layout"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/setting_tangmao_account_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/setting_head_view_layout"
+                        android:text="糖猫帐号"
+                        android:textColor="@color/white" />
+
+                    <EditText
+                        android:id="@+id/setting_tangmao_account_et"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:padding="5dp"
+                android:text="宝宝成长信息"
+                android:textColor="#0000ff" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp">
+
+                <LinearLayout
+                    android:id="@+id/setting_grade_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/setting_item_height"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="年龄"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/setting_grade_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="5岁"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/setting_sex_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/setting_item_height"
+                    android:layout_below="@+id/setting_grade_layout"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="性别"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/setting_sex_tv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="女"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/setting_interest_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/setting_item_height"
+                    android:layout_below="@+id/setting_sex_layout"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:text="兴趣标签"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/setting_interest_tv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center_horizontal"
+                        android:text="#钢琴#"
+                        android:textColor="@android:color/white" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_launcher" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/setting_position_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/setting_item_height"
+                    android:layout_below="@+id/setting_interest_layout"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:text="地点标签"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/setting_position_tv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center_horizontal"
+                        android:text="#五道口#"
+                        android:textColor="@android:color/white" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_launcher" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
