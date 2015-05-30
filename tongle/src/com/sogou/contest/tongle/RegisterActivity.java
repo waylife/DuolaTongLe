@@ -1,6 +1,7 @@
 package com.sogou.contest.tongle;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +9,9 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 /**
  * Created by bao on 2015/5/30.
@@ -22,7 +26,7 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        //CalligraphyConfig.initDefault(new CalligraphyConfig.Builder().setDefaultFontPath());
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder().setDefaultFontPath("serif").setFontAttrId(R.attr.fontPath).build());
         registerButton = (Button)findViewById(R.id.register);
         cancelButton = (Button)findViewById(R.id.cancel);
         phoneEditText = (EditText)findViewById(R.id.phone);
@@ -32,6 +36,10 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
 
     }
 
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @Override
     public void onClick(View v) {
