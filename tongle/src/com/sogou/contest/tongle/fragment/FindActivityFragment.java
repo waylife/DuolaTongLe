@@ -21,16 +21,10 @@ public class FindActivityFragment extends BaseSearchTabFragment {
     @Override
     public void doCreate(View view) {
 
-        ActivityDao dao=new ActivityDao(getActivity());
-        List<User> mList= dao.queryAll();//("type", "0");
-        for (int i=0; i<mList.size();i++){
-            System.out.print(mList.get(i));
-        }
-        System.out.print(mList);
-        System.out.print("-----------------------------------");
+        List<User> mList= null;
 
-//        setHeadImage(R.drawable.find_activity_top);
-//        setAdapter(new BaseAdapter[]{new ActivityAdapter(mList, getActivity()),
-//                new ActivityAdapter(mList, getActivity())}, new String[]{"个人发起", "商家发起"});
+        setHeadImage(R.drawable.find_activity_top);
+        setAdapter(new BaseAdapter[]{new ActivityAdapter(mList, getActivity()),
+                new ActivityAdapter(mList, getActivity())}, new String[]{"个人发起", "商家发起"});
     }
 }
