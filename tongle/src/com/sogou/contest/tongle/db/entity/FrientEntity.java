@@ -10,7 +10,7 @@ public class FrientEntity extends BaseEntity{
     private boolean isFollowed;
     private String positionTag;
     private String interestTag;
-    private String avatar;
+    private int avatar;
     private boolean isPopular;
     private int grade;
     private String tangmaoAccount;
@@ -64,11 +64,11 @@ public class FrientEntity extends BaseEntity{
         this.interestTag = interestTag;
     }
 
-    public String getAvatar() {
+    public int getAvatar() {
         return avatar;
     }
 
-    public void setAvatar(String avatar) {
+    public void setAvatar(int avatar) {
         this.avatar = avatar;
     }
 

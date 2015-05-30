@@ -24,7 +24,9 @@
 
     <ImageView
         android:id="@+id/head_image"
+        android:layout_marginTop="10dp"
         android:layout_width="115dp"
         android:layout_height="55dp"
+        android:src="@drawable/ic_launcher"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

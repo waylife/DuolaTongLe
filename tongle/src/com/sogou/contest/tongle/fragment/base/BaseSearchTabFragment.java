@@ -1,6 +1,7 @@
 package com.sogou.contest.tongle.fragment.base;
 
 import android.graphics.Color;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.KeyEvent;
@@ -17,10 +18,13 @@ import android.widget.Toast;
 
 import com.sogou.contest.tongle.R;
 
+import java.util.List;
+
 /**
  * Created by rxread on 5/30/15.
  */
 public abstract class BaseSearchTabFragment extends Fragment {
+    private int mCurrentTab=0;
     LayoutInflater mInflater;
     protected View mMainView;
     protected ListView mListView;
@@ -55,15 +59,16 @@ public abstract class BaseSearchTabFragment extends Fragment {
     }
 
 
-    private void search(String text) {
+    private void search(final String text) {
         if (mAdapters == null || mAdapters.length == 0 || mAdapters.length > 3) {
             return;
         }
+        if(mCurrentTab>3){
+            return;
+        }
         Toast.makeText(getActivity(), "正在搜索:" + text, Toast.LENGTH_SHORT).show();
-        for (int i = 0; i < mAdapters.length; i++) {
-            if (mAdapters[i] instanceof ISearchTab) {
-                ((ISearchTab) mAdapters[i]).updateData(text);
-            }
+        if(mAdapters[mCurrentTab] instanceof ISearchTab){
+            new AsyncDataTask((ISearchTab)mAdapters[mCurrentTab]).execute(text,String.valueOf(mCurrentTab));
         }
     }
 
@@ -82,8 +87,7 @@ public abstract class BaseSearchTabFragment extends Fragment {
                 if (index >= mAdapters.length) {
                     return;
                 }
-                mListView.setAdapter(mAdapters[index]);
-                setTabsBackGround(index);
+                setTab(index);
             }
         };
         for (int i = 0; i < adapters.length; i++) {
@@ -92,19 +96,20 @@ public abstract class BaseSearchTabFragment extends Fragment {
             mTabs[i].setTag(i);
             mTabs[i].setOnClickListener(onClickListener);
         }
-        mListView.setAdapter(mAdapters[0]);
-        mTabs[0].setBackgroundColor(Color.RED);
-        setTabsBackGround(0);
+        setTab(0);
     }
 
-    private void setTabsBackGround(int selected) {
+    private void setTab(int selected) {
         for (int i = 0; i < mAdapters.length; i++) {
             if (selected == i) {
+                mCurrentTab=selected;
                 mTabs[i].setBackgroundColor(getActivity().getResources().getColor(R.color.tab_selected));
+                mListView.setAdapter(mAdapters[selected]);
             } else {
                     mTabs[i].setBackgroundResource(0);
-                }
+            }
         }
+        search(mSearchEt.getText().toString());
     }
 
     private View getHeaderView(LayoutInflater inflater) {

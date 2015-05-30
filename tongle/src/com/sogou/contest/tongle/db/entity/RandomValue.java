@@ -11,9 +11,12 @@ public class RandomValue {
     private static String name_sex = "";
 
     public static String getChineseName() {
+        return getChineseName(getNum(0,1));
+    }
+
+    public static String getChineseName(int sex) {
         int index = getNum(0, firstName.length() - 1);
         String first = firstName.substring(index, index + 1);
-        int sex = getNum(0, 1);
         String str = boy;
         int length = boy.length();
         if (sex == 0) {
