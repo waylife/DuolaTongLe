@@ -31,8 +31,8 @@ public class FindFriendFragment extends BaseSearchTabFragment {
             mList.add(i + "");
         }
         setHeadImage(R.drawable.tongle_top_friend);
-        setAdapter(new BaseAdapter[]{new ActivityAdapter(mList, getActivity()),
-                new ActivityAdapter(mList, getActivity()), new ActivityAdapter(mList, getActivity())}, new String[]{"热门", "附近", "糖猫"});
+        setAdapter(new BaseAdapter[]{new FriendAdapter(mList, getActivity()),
+                new FriendAdapter(mList, getActivity()), new FriendAdapter(mList, getActivity())}, new String[]{"热门", "附近", "糖猫"});
 
     }
 }

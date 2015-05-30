@@ -2,22 +2,25 @@ package com.sogou.contest.tongle.activity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.sogou.contest.tongle.R;
 
-public class SettingActivity extends BaseActivity {
+public class EditTagActivity extends BaseActivity {
 
     public static void actionTo(Context context){
-        Intent intent=new Intent(context,SettingActivity.class);
+        Intent intent=new Intent(context,EditTagActivity.class);
         context.startActivity(intent);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_setting);
+        setContentView(R.layout.activity_edit_tag);
         initView();
     }
 
@@ -29,16 +32,10 @@ public class SettingActivity extends BaseActivity {
                 int id=v.getId();
                 switch(id){
                     case R.id.setting_save:
-                        SettingActivity.this.finish();
+                        EditTagActivity.this.finish();
                         break;
                     case R.id.setting_cancel:
-                        SettingActivity.this.finish();
-                        break;
-                    case R.id.setting_interest_layout:
-                        EditTagActivity.actionTo(SettingActivity.this);
-                        break;
-                    case R.id.setting_position_layout:
-                        EditTagActivity.actionTo(SettingActivity.this);
+                        EditTagActivity.this.finish();
                         break;
                 }
             }
@@ -46,8 +43,6 @@ public class SettingActivity extends BaseActivity {
 
         findViewById(R.id.setting_save).setOnClickListener(onClickListener);
         findViewById(R.id.setting_cancel).setOnClickListener(onClickListener);
-        findViewById(R.id.setting_interest_layout).setOnClickListener(onClickListener);
-        findViewById(R.id.setting_position_layout).setOnClickListener(onClickListener);
     }
 
 }
