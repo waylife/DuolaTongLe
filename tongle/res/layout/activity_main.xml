@@ -24,22 +24,22 @@
             android:id="@+id/bt1"
             android:layout_width="75dp"
             android:layout_height="55dp"
-            android:layout_weight="1"
-            android:text="找朋友" />
+            android:background="@drawable/tongle_bottom_friend"
+            android:layout_weight="1"/>
 
         <Button
             android:id="@+id/bt2"
             android:layout_width="75dp"
+            android:background="@drawable/tongle_bottom_activity"
             android:layout_height="55dp"
-            android:layout_weight="1"
-            android:text="找活动" />
+            android:layout_weight="1"/>
 
         <Button
             android:id="@+id/bt3"
             android:layout_width="75dp"
             android:layout_height="55dp"
-            android:layout_weight="1"
-            android:text="我" />
+            android:background="@drawable/tongle_bottom_me"
+            android:layout_weight="1"/>
     </LinearLayout>
 
 </LinearLayout>

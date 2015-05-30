@@ -12,7 +12,7 @@
         android:layout_height="110dp"
         android:layout_marginLeft="5dp"
         android:layout_weight="1"
-        android:src="@drawable/head_view_civ_fj"
+        android:background="@drawable/head_view_civ_fj"
         app:siBorderColor="@color/white"
         app:siBorderWidth="0dp" />
 
