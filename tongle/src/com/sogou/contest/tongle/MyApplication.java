@@ -1,5 +1,6 @@
 package com.sogou.contest.tongle;
 
+import com.sogou.contest.tongle.dao.ActivityDao;
 import com.sogou.contest.tongle.db.DbMock;
 import com.sogou.contest.tongle.utils.Logger;
 
@@ -16,9 +17,11 @@ public class MyApplication extends Application {
 		mContext = getApplicationContext();
 		
 		Logger.isLog=true;//发布正式环境打印改为false
-		if(!mDataInited){
+		if(!mDataInited){//只会调用一次
 			mDataInited=true;
 			DbMock.mockDbData(this);
+			ActivityDao dao=new ActivityDao(mContext);
+			dao.insert_test();
 		}
 	}
 

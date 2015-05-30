@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.util.Log;
+import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -44,17 +46,20 @@ public class ActivityAdapter extends BaseAdapter implements ISearchTab {
         ActivityDao dao = new ActivityDao(mContext);
         List<User> mList = null;
         if (tab == 0) {
-            Logger.i(TAG,"0");
-            mList = dao.query("type", "个人");
-        } else if(tab==1){
-            Logger.i(TAG,"1");
-            mList = dao.query("type", "商家");
-        }else{
-            Logger.i(TAG,"else");
-            mList = dao.query("title", tag);
+            if (TextUtils.isEmpty(tag)) {
+                mList = dao.query("type", "个人");
+            } else {
+                mList = dao.query("type", "title", "个人", tag);
+            }
+        } else if (tab == 1) {
+            if (TextUtils.isEmpty(tag)) {
+                mList = dao.query("type", "商家");
+            } else {
+                mList = dao.query("type", "title", "商家", tag);
+            }
         }
-        for (int i=0;i<mList.size();i++){
-            User u=mList.get(i);
+        for (int i = 0; i < mList.size(); i++) {
+            User u = mList.get(i);
             System.out.println(u);
         }
         return mList;
@@ -73,12 +78,12 @@ public class ActivityAdapter extends BaseAdapter implements ISearchTab {
 
     @Override
     public int getCount() {
-        return lists==null?0:lists.size();
+        return lists == null ? 0 : lists.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return lists==null?null:lists.get(position);
+        return lists == null ? null : lists.get(position);
     }
 
 
@@ -94,7 +99,7 @@ public class ActivityAdapter extends BaseAdapter implements ISearchTab {
             holder = new ViewHolder();
             convertView = View.inflate(mContext, R.layout.item_activity_view, null);
             holder.item_activity_view_civ = (CircularImageView) convertView.findViewById(R.id.item_activity_view_civ);
-            holder.head_view_info = (TextView) convertView.findViewById(R.id.item_activity_view_info);
+            holder.item_activity_info = (TextView) convertView.findViewById(R.id.item_activity_view_info);
             holder.item_activity_view_lbs_info = (TextView) convertView.findViewById(R.id.item_activity_view_lbs_info);
             holder.item_activity_view_bq_info = (TextView) convertView.findViewById(R.id.item_activity_view_bq_info);
             holder.item_activity_view_zan = (ImageView) convertView.findViewById(R.id.item_activity_view_zan);
@@ -103,13 +108,29 @@ public class ActivityAdapter extends BaseAdapter implements ISearchTab {
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        Object object = lists.get(position);
+        User user = (User) lists.get(position);
+        if("女".equals(user.sex)){
+
+        }else{
+
+
+        }
+        holder.item_activity_info.setText(user.activity);
+        holder.item_activity_view_lbs_info.setText(user.lbs);
+        holder.item_activity_view_bq_info.setText(user.title);
+        int i = Integer.valueOf(user.good);
+        if (i == 0) {
+            holder.item_activity_view_zan.setBackgroundResource(R.drawable.item_activity_view_xing_n);
+        } else {
+            holder.item_activity_view_zan.setBackgroundResource(R.drawable.item_activity_view_xing);
+        }
+
         return convertView;
     }
 
     class ViewHolder {
         CircularImageView item_activity_view_civ;//头像
-        TextView head_view_info;//活动描述
+        TextView item_activity_info;//活动描述
         TextView item_activity_view_lbs_info;//lbs
         TextView item_activity_view_bq_info;//标签
         ImageView item_activity_view_zan;//点赞

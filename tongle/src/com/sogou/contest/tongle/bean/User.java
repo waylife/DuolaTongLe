@@ -36,7 +36,8 @@ public class User {
 	@Override
 	public String toString() {
 		return "User{" +
-				"uname='" + uname + '\'' +
+				"head='" + head + '\'' +
+				", uname='" + uname + '\'' +
 				", sex='" + sex + '\'' +
 				", age='" + age + '\'' +
 				", type='" + type + '\'' +
@@ -50,6 +51,10 @@ public class User {
 				'}';
 	}
 
+	/**
+	 * 头像用的id
+	 */
+	public String head;
 	/**
 	 * 姓名
 	 */
