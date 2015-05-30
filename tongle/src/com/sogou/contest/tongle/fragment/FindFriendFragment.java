@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.sogou.contest.tongle.R;
 import com.sogou.contest.tongle.adapter.ActivityAdapter;
+import com.sogou.contest.tongle.adapter.FriendAdapter;
 import com.sogou.contest.tongle.fragment.base.BaseSearchTabFragment;
 
 import java.util.ArrayList;
@@ -29,7 +30,7 @@ public class FindFriendFragment extends BaseSearchTabFragment {
         for (int i = 0; i < 20; i++) {
             mList.add(i + "");
         }
-        setAdapter(new BaseAdapter[]{new ActivityAdapter(mList, getActivity()),
-                new ActivityAdapter(mList, getActivity()), new ActivityAdapter(mList, getActivity())}, new String[]{"热门", "附近", "糖猫"});
+        setAdapter(new BaseAdapter[]{new FriendAdapter(mList, getActivity()),
+                new FriendAdapter(mList, getActivity()), new FriendAdapter(mList, getActivity())}, new String[]{"热门", "附近", "糖猫"});
     }
 }

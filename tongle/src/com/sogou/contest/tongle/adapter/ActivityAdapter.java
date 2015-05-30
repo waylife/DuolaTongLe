@@ -45,31 +45,27 @@ public class ActivityAdapter extends BaseAdapter {
         ViewHolder holder = null;
         if (convertView == null) {
             holder = new ViewHolder();
-            convertView = View.inflate(mContext, R.layout.item_head_view, null);
-            holder.head_view_civ = (CircularImageView) convertView.findViewById(R.id.head_view_civ);
-            holder.head_view_info = (TextView) convertView.findViewById(R.id.head_view_info);
-            holder.head_view_distance = (ImageView) convertView.findViewById(R.id.head_view_distance);
+            convertView = View.inflate(mContext, R.layout.item_activity_view, null);
+            holder.item_activity_view_civ = (CircularImageView) convertView.findViewById(R.id.item_activity_view_civ);
+            holder.head_view_info = (TextView) convertView.findViewById(R.id.item_activity_view_info);
+            holder.item_activity_view_lbs_info = (TextView) convertView.findViewById(R.id.item_activity_view_lbs_info);
+            holder.item_activity_view_bq_info = (TextView) convertView.findViewById(R.id.item_activity_view_bq_info);
+            holder.item_activity_view_zan = (ImageView) convertView.findViewById(R.id.item_activity_view_zan);
+            holder.item_activity_view_pl = (ImageView) convertView.findViewById(R.id.item_activity_view_pl);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
-        }
-        if (position % 3 == 0) {
-            holder.head_view_civ.setBackgroundResource(R.drawable.head_view_civ_xqx);
-            holder.head_view_info.setBackgroundResource(R.drawable.head_view_des_xx);
-        } else if (position % 3 == 1) {
-            holder.head_view_civ.setBackgroundResource(R.drawable.head_view_civ_nn);
-            holder.head_view_info.setBackgroundResource(R.drawable.head_view_des_nn);
-        } else if (position % 3 == 2) {
-            holder.head_view_civ.setBackgroundResource(R.drawable.head_view_civ_fj);
-            holder.head_view_info.setBackgroundResource(R.drawable.head_view_des_fj);
         }
         Object object = lists.get(position);
         return convertView;
     }
 
     class ViewHolder {
-        CircularImageView head_view_civ;
-        TextView head_view_info;
-        ImageView head_view_distance;
+        CircularImageView item_activity_view_civ;//头像
+        TextView head_view_info;//活动描述
+        TextView item_activity_view_lbs_info;//lbs
+        TextView item_activity_view_bq_info;//标签
+        ImageView item_activity_view_zan;//点赞
+        ImageView item_activity_view_pl;//评论
     }
 }
