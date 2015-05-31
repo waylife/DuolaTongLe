@@ -66,7 +66,7 @@ public abstract class BaseSearchTabFragment extends Fragment {
         if(mCurrentTab>3){
             return;
         }
-        Toast.makeText(getActivity(), "正在搜索:" + text, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getActivity(), "正在搜索:" + text, Toast.LENGTH_SHORT).show();
         if(mAdapters[mCurrentTab] instanceof ISearchTab){
             new AsyncDataTask((ISearchTab)mAdapters[mCurrentTab]).execute(text,String.valueOf(mCurrentTab));
         }
