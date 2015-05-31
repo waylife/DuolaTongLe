@@ -5,8 +5,8 @@
     android:background="@drawable/register_bg">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="#96A5B8"
+        android:layout_height="@dimen/view_head_height"
+        android:background="#9f96A5B8"
         >
         <ImageView
             android:id="@+id/back_imageView1"

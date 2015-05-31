@@ -9,7 +9,7 @@
         android:id="@+id/head_view"
         android:layout_width="fill_parent"
         android:layout_height="@dimen/view_head_height"
-        android:background="#96A2B3" />
+        android:background="#9f96A2B3" />
 
 
     <ListView

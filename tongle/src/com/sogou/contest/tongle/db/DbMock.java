@@ -21,12 +21,13 @@ public class DbMock {
     private static String []INTEREST_TAGS="游泳#读书#乒乓球#滑冰#画画#下棋#搞毛线#搜狗#糖猫".split("#");
     public static int []AVATAR_BOY_RESIDS=new int[]{R.drawable.head_view_civ_xqx,R.drawable.head_view_civ_fj,R.drawable.ic_boy_1,R.drawable.ic_boy_2,R.drawable.ic_boy_3};
     public static int []AVATAR_GIRL_RESIDS=new int[]{R.drawable.head_view_civ_nn,R.drawable.ic_girl_1,R.drawable.ic_girl_2,R.drawable.ic_girl_3,R.drawable.ic_girl_4,R.drawable.ic_girl_5};
+
     public static void mockDbData(Context context) {
         DbUtils dbUtils = DbUtils.create(context);
         dbUtils.configAllowTransaction(true);
         Random random = new Random(SystemClock.elapsedRealtime());
         try {
-            for (int i = 0; i < 1000; i++) {
+            for (int i = 0; i < 50; i++) {
                 if(i==0){
                     FrientEntity entity=getRandomFriend(random);
                     MyApplication.getApp().initSelfItem(entity);
@@ -127,7 +128,7 @@ public class DbMock {
     }
 
     public static String getRandomParentName(Random random){
-        if(random.nextInt(4)==1){
+        if(1==1){
             return RandomValue.getChineseName();
         }else{
             return "";

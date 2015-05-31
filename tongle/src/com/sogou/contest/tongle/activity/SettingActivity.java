@@ -57,10 +57,10 @@ public class SettingActivity extends BaseActivity {
                         SettingActivity.this.finish();
                         break;
                     case R.id.setting_interest_layout:
-                        EditTagActivity.actionTo(SettingActivity.this);
+                        EditTagActivity.actionTo(SettingActivity.this,false);
                         break;
                     case R.id.setting_position_layout:
-                        EditTagActivity.actionTo(SettingActivity.this);
+                        EditTagActivity.actionTo(SettingActivity.this,true);
                         break;
                 }
             }
