@@ -105,8 +105,10 @@ public abstract class BaseSearchTabFragment extends Fragment {
                 mCurrentTab=selected;
                 mTabs[i].setBackgroundColor(getActivity().getResources().getColor(R.color.tab_selected));
                 mListView.setAdapter(mAdapters[selected]);
+                mTabs[i].setTextColor(Color.parseColor("#ffffff"));
             } else {
-                    mTabs[i].setBackgroundResource(0);
+                mTabs[i].setBackgroundResource(0);
+                mTabs[i].setTextColor(Color.parseColor("#000000"));
             }
         }
         search(mSearchEt.getText().toString());
