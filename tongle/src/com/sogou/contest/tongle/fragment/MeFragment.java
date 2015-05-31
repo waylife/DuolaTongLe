@@ -28,6 +28,7 @@ public class MeFragment extends Fragment {
 	private ImageButton mSettingIb;
 	private LinearLayout focused_friend;
 	private LinearLayout publish_activity;
+	private LinearLayout finish_activity;
 	private TextView mNameTv;
 	private ListView xlistview;
 	private List<?> list;
@@ -63,6 +64,15 @@ public class MeFragment extends Fragment {
 				PublishActivity.actionTo(getActivity());
 			}
 		});
+
+		finish_activity = (LinearLayout)mMainView.findViewById(R.id.finish_activity);
+		finish_activity.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				PublishActivity.actionTo(getActivity());
+			}
+		});
+
 
 		mNameTv=(TextView)mMainView.findViewById(R.id.setting_name);
 		mNameTv.setText(MyApplication.getApp().getSelfEntity().getName());
