@@ -92,6 +92,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/finish_activity"
             android:layout_width="fill_parent"
             android:layout_height="@dimen/me_item_height"
             android:layout_marginLeft="20dp"
