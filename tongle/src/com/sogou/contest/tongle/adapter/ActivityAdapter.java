@@ -1,31 +1,26 @@
 package com.sogou.contest.tongle.adapter;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
 import android.text.TextUtils;
-import android.util.Log;
-import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.github.siyamed.shapeimageview.CircularImageView;
 import com.lidroid.xutils.BitmapUtils;
-import com.lidroid.xutils.db.sqlite.Selector;
-import com.lidroid.xutils.exception.DbException;
 import com.sogou.contest.tongle.R;
 import com.sogou.contest.tongle.bean.User;
 import com.sogou.contest.tongle.dao.ActivityDao;
-import com.sogou.contest.tongle.db.entity.FrientEntity;
+import com.sogou.contest.tongle.db.DbMock;
 import com.sogou.contest.tongle.fragment.base.ISearchTab;
-import com.sogou.contest.tongle.utils.Logger;
+import com.sogou.contest.tongle.listener.NotfiyListener;
+
+import java.util.List;
 
 public class ActivityAdapter extends BaseAdapter implements ISearchTab {
+
     @Override
     public void beforeRequestData() {
 
@@ -108,12 +103,11 @@ public class ActivityAdapter extends BaseAdapter implements ISearchTab {
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        User user = (User) lists.get(position);
-        if("女".equals(user.sex)){
-
-        }else{
-
-
+        user = (User) lists.get(position);
+        if ("女".equals(user.sex)) {
+            holder.item_activity_view_civ.setImageResource(DbMock.AVATAR_GIRL_RESIDS[position % DbMock.AVATAR_GIRL_RESIDS.length]);
+        } else {
+            holder.item_activity_view_civ.setImageResource(DbMock.AVATAR_BOY_RESIDS[position % DbMock.AVATAR_BOY_RESIDS.length]);
         }
         holder.item_activity_info.setText(user.activity);
         holder.item_activity_view_lbs_info.setText(user.lbs);
@@ -124,9 +118,10 @@ public class ActivityAdapter extends BaseAdapter implements ISearchTab {
         } else {
             holder.item_activity_view_zan.setBackgroundResource(R.drawable.item_activity_view_xing);
         }
-
         return convertView;
     }
+
+    private User user;
 
     class ViewHolder {
         CircularImageView item_activity_view_civ;//头像

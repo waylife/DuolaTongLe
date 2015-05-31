@@ -19,19 +19,6 @@ public class User {
 	public User() {
 	}
 
-	public User(String uname, String sex, String age, String type, String good, String activity, String lbs, String title, String father, String fatherphone, String info) {
-		this.uname = uname;
-		this.sex = sex;
-		this.age = age;
-		this.type = type;
-		this.good = good;
-		this.activity = activity;
-		this.lbs = lbs;
-		this.title = title;
-		this.father = father;
-		this.fatherphone = fatherphone;
-		this.info = info;
-	}
 
 	@Override
 	public String toString() {

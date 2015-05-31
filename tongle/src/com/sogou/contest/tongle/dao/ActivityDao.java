@@ -9,6 +9,7 @@ import android.os.Looper;
 import com.sogou.contest.tongle.Constant;
 import com.sogou.contest.tongle.bean.User;
 import com.sogou.contest.tongle.db.entity.RandomValue;
+import com.sogou.contest.tongle.listener.NotfiyListener;
 import com.sogou.contest.tongle.utils.Logger;
 
 import java.util.ArrayList;
@@ -24,7 +25,7 @@ public class ActivityDao {
     }
 
     private static String[] POSITION_TAGS = "五道口#天通苑#回龙观#西单#鸟巢#北京西站#国贸#苹果园#五棵松#宛城#大望路#圆明园西#香山#周口店#慕田峪#白河峡谷#天安门".split("#");
-    private static String[] INTEREST_TAGS = "游泳#读书#乒乓球#滑冰#画画#下棋#搞毛线".split("#");
+    private static String[] INTEREST_TAGS = "游泳#读书#乒乓球#滑冰#画画#下棋#看书#唱歌".split("#");
     private static String[] ACTIVITY_TAGS = "亲子少儿军事活动#幼儿钢琴启蒙体验#野外拓展培训#吉尼斯7日游#宝贝拔河大赛#".split("#");
     private static String[] SEX = "男#女".split("#");
     private static String[] TYPE = "个人#商家".split("#");

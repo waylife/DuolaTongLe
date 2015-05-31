@@ -4,7 +4,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="view_head_height">40dp</dimen>
-    <dimen name="tongle_bottom_height">62dp</dimen>
+    <dimen name="tongle_bottom_height">65dp</dimen>
     <dimen name="me_item_height">40dp</dimen>
     <dimen name="me_item_gap">10dp</dimen>
     <dimen name="setting_item_height">45dp</dimen>

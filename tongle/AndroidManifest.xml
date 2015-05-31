@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sogou.contest.tongle"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -12,7 +12,6 @@
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -33,18 +32,20 @@
         android:allowBackup="true"
         android:icon="@drawable/application_logo"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"></activity>
         <activity android:name=".activity.JoinedActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.sogou.contest.tongle.activity.BaseActivity" />
         </activity>
-        <activity android:name=".activity.RegisterActivity"
+        <activity
+            android:name=".activity.RegisterActivity"
+
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -56,16 +57,14 @@
         <provider
             android:name=".dao.TongLeProvider"
             android:authorities="sogoutonele"
-            android:exported="true" >
-        </provider>
+            android:exported="true"></provider>
 
 
         <activity
             android:name=".activity.FocusedFriendActivity"
             android:label="@string/focused_friends"
-            android:screenOrientation="portrait"
             android:parentActivityName=".activity.BaseActivity"
-            >
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.sogou.contest.tongle.activity.BaseActivity" />
@@ -80,17 +79,16 @@
         <activity
             android:name=".activity.SettingActivity"
             android:label="@string/title_activity_setting"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".activity.BaseActivity" >
+            android:parentActivityName=".activity.BaseActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.sogou.contest.tongle.activity.BaseActivity" />
         </activity>
         <activity
             android:name=".activity.EditTagActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/title_activity_edit_tag" >
-        </activity>
+            android:label="@string/title_activity_edit_tag"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

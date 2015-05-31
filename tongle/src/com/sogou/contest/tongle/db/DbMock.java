@@ -19,8 +19,8 @@ import java.util.Random;
 public class DbMock {
     private static String []POSITION_TAGS="五道口#天通苑#回龙观#西单#鸟巢#北京西站#国贸#苹果园#五棵松#宛城#大望路#圆明园西#香山#周口店#慕田峪#白河峡谷#天安门".split("#");
     private static String []INTEREST_TAGS="游泳#读书#乒乓球#滑冰#画画#下棋#搞毛线#搜狗#糖猫".split("#");
-    private static int []AVATAR_BOY_RESIDS=new int[]{R.drawable.head_view_civ_xqx,R.drawable.head_view_civ_fj,R.drawable.ic_boy_1,R.drawable.ic_boy_2,R.drawable.ic_boy_3};
-    private static int []AVATAR_GIRL_RESIDS=new int[]{R.drawable.head_view_civ_nn,R.drawable.ic_girl_1,R.drawable.ic_girl_2,R.drawable.ic_girl_3,R.drawable.ic_girl_4,R.drawable.ic_girl_5};
+    public static int []AVATAR_BOY_RESIDS=new int[]{R.drawable.head_view_civ_xqx,R.drawable.head_view_civ_fj,R.drawable.ic_boy_1,R.drawable.ic_boy_2,R.drawable.ic_boy_3};
+    public static int []AVATAR_GIRL_RESIDS=new int[]{R.drawable.head_view_civ_nn,R.drawable.ic_girl_1,R.drawable.ic_girl_2,R.drawable.ic_girl_3,R.drawable.ic_girl_4,R.drawable.ic_girl_5};
     public static void mockDbData(Context context) {
         DbUtils dbUtils = DbUtils.create(context);
         dbUtils.configAllowTransaction(true);
@@ -79,6 +79,15 @@ public class DbMock {
     public static int getRandomAvatar(Random random,int sex){
         int resid=0;
         if(sex==1){//boy
+            resid=AVATAR_BOY_RESIDS[random.nextInt(AVATAR_BOY_RESIDS.length)];
+        }else{//girl
+            resid=AVATAR_GIRL_RESIDS[random.nextInt(AVATAR_GIRL_RESIDS.length)];
+        }
+        return resid;
+    }
+    public static int getRandomAvatar(Random random,String sex){
+        int resid=0;
+        if("男".equals(sex)){//boy
             resid=AVATAR_BOY_RESIDS[random.nextInt(AVATAR_BOY_RESIDS.length)];
         }else{//girl
             resid=AVATAR_GIRL_RESIDS[random.nextInt(AVATAR_GIRL_RESIDS.length)];
